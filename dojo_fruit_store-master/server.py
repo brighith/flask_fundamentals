@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-import datetime
+from datetime import datetime
 app = Flask(__name__)
 
 
@@ -18,8 +18,8 @@ def checkout():
     firstName = request.form['first_name']
     lastName = request.form['last_name']
     studentId = request.form['student_id']
-    now = datetime.datetime.now()
-    timer = now.strftime("%Y-%m-%d %H:%M")
+    now = datetime.now()
+    timer = now.strftime("%Y-%m-%d %H:%M:%S Palestine time")
     return render_template("checkout.html", strawberry=int(strawberry), raspberry=int(raspberry), apple=int(apple), blackberry=int(blackberry), first_name=firstName, last_name=lastName, student_id=studentId, times=timer)
 
 
