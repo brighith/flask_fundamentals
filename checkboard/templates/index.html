@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkerboard</title>
+
+    <style>
+      table tr td {
+        width: 50px;
+        height: 50px;
+      }
+
+      .color1 {
+        background-color: {{c1}};
+      }
+
+      .color2 {
+        background-color: {{c2}};
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      {% for i in range(x):%}
+      <tr>
+        {% for j in range(y): %} {% if (i+j)%2!=0%}
+        <td class="color2"></td>
+        {% else %}
+        <td class="color1"></td>
+        {% endif %} {% endfor %}
+      </tr>
+      <!-- <tr>
+        {% for j in range(y): %}
+        <td class="color2"></td>
+        <td class="color1"></td>
+        {% endfor %}
+      </tr> -->
+      {% endfor %}
+    </table>
+  </body>
+</html>

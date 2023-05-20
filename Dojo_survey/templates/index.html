@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=h1, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      body {
+        background-color: #514f50;
+      }
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      #button {
+        float: right;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      #container {
+        width: 400px;
+        height: 580px;
+        margin: 55px auto;
+        padding: 35px;
+        border: 1px solid black;
+        background-color: #35e090;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Create a User</h1>
+      <form action="/result" method="post">
+        <p>Your Name: <input type="text" name="name" /></p>
+        <p>
+          Dojo Location:
+          <select name="location" id="dojo">
+            <option value="San Jose">San Jose</option>
+            <option value="San Jone">San Jone</option>
+            <option value="San Francesco">San Francesco</option>
+            <option value="San tonio">San tonio</option>
+          </select>
+        </p>
+        <p>
+          Favorite Language:
+          <select name="language" id="dojo">
+            <option value="Python">Python</option>
+            <option value="JS">JS</option>
+            <option value="PHP">PHP</option>
+            <option value="Jango">Jango</option>
+          </select>
+        </p>
+
+        <p>Please do you need more Languages</p>
+        <input type="radio" id="yes" name="more" />
+        <label for="yes">Yes</label><br />
+        <input type="radio" id="no" name="more" />
+        <label for="no">No</label><br />
+        <p>Best Time to take the Language</p>
+        <input type="checkbox" id="summer" name="time" value="summer" />
+        <label for="summer">Summer</label>
+        <input type="checkbox" id="winter" name="time" value="winter" />
+        <label for="winter">Winter</label>
+        <input type="checkbox" id="autumn" name="time" value="autumn" />
+        <label for="summer">Autumn</label>
+
+        <p>Comment (optional):</p>
+        <textarea name="comment" id="dojo" cols="30" rows="10">
+        Your Comments</textarea
+        >
+        <p><input type="submit" value="Create User" /></p>
+      </form>
+    </div>
+  </body>
+</html>
