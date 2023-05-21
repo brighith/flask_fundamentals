@@ -4,7 +4,7 @@ app.secret_key = 'keep it secret, keep it safe'
 
 
 @app.route('/')
-def index():
+def counter():
     if 'count' not in session:
         session['count'] = 0
     else:
