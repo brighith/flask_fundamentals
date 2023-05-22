@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        #container {
+      margin: 20px auto;
+      text-align: center;
+      width: 800px;
+      height: 400px;
+      background-color: aqua;
+    </style>
+    <title>Geussing Number</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <h2>Welcome to the Great Numbers Game</h2>
+      <p>I am thinking of a number between 1 and 100</p>
+      <br />
+      <p>Take a guess!</p>
+      <p>{{result}}</p>
+      <form action="/guess" method="POST">
+        <input type="text" name="guess" />
+        <input type="submit" name="submit" />
+      </form>
+    </div>
+  </body>
+</html>
