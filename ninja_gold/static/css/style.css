@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container > p {
+  border: 1px 1px black solid;
+}
+.gold_items {
+  display: flex;
+  justify-content: space-around;
+}
+form {
+  width: 300px; /* Adjust this value to match your desired width */
+  margin: 0 auto; /* Center the form horizontally */
+  border: 5px solid #ccc; /* Change this to your desired border color */
+  border-radius: 4px;
+  text-align: center;
+  padding: 25px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Change this to your desired background color */
+  color: #fff; /* Change this to your desired text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+span {
+  font-weight: bold;
+  color: #333; /* Change this to your desired text color */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  background-color: #4caf50; /* Change this to your desired background color */
+  color: #fff; /* Change this to your desired text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049; /* Change this to your desired hover background color */
+}
+
+body {
+  background-color: #f2f2f2; /* Change this to your desired background color */
+  color: #333; /* Change this to your desired text color */
+  font-family: Arial, sans-serif; /* Change this to your desired font */
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+  margin-left: 30%;
+}
+h2 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+  color: #45a049;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: #45a049;
+}
+
+#textarea {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  font: medium;
+  height: 20em;
+  overflow: auto;
+  padding: 2px;
+  resize: none;
+  width: 94em;
+  height: 200px;
+}
+.reset {
+  color: white;
+  display: inline-block;
+  height: 70px;
+  width: 155px;
+  padding: 5px;
+  border-radius: 7px;
+  align-self: center;
+}
