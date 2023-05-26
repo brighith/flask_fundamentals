@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Great Number</title>
+    <style>
+      #container {
+        background-color: rgb(33, 94, 138);
+        width: 500px;
+        height: 500px;
+        border: 2px solid red;
+      }
+      .red,
+      .green {
+        color: white;
+        height: 250px;
+        width: 250px;
+        border: 1px solid black;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>wellcome</h1>
+      <h2>Number on Attempts:{{attempts}}</h2>
+      {% if random < number %}
+      <div class="red">
+        <h1>Too High</h1>
+      </div>
+      {% elif random > number %}
+      <div class="red">
+        <h1>Too Low</h1>
+      </div>
+      {%else%}
+      <div class="green">
+        <h1>
+          {{number}} was the number you got it after {{attempts}} attempts
+        </h1>
+        <form action="/clear" method="post">
+          <input type="submit" name="clear" />
+        </form>
+      </div>
+      {% endif %} {% if attempts >=5 %}
+      <div class="yellow">
+        <h1>You Lose</h1>
+        <form action="/lose" method="post">
+          <input type="submit" value="again" name="lose" />
+        </form>
+      </div>
+      {% endif %}
+
+      <form action="/process" method="post">
+        <input type="text" name="name" id="" />
+        <input type="submit" name="reset" />
+      </form>
+    </div>
+  </body>
+</html>
