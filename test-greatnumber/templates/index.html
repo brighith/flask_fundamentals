@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Great Number</title>
     <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
       #container {
         background-color: rgb(33, 94, 138);
         width: 500px;
         height: 500px;
         border: 2px solid red;
+        text-align: center;
       }
       .red,
-      .green {
+      .green .yellow {
         color: white;
         height: 250px;
         width: 250px;
         border: 1px solid black;
+        margin-left: 120px;
+        margin-bottom: 5px;
       }
       .red {
         background-color: red;
@@ -25,41 +32,44 @@
       .green {
         background-color: green;
       }
+      .yellow {
+        background-color: yellowgreen;
+      }
     </style>
   </head>
   <body>
     <div id="container">
-      <h1>wellcome</h1>
+      <h1>Wellcome To My Guessing Game</h1>
       <h2>Number on Attempts:{{attempts}}</h2>
-      {% if random < number %}
+      {% if random < number and attempts <5 %}
       <div class="red">
         <h1>Too High</h1>
       </div>
-      {% elif random > number %}
+      {% elif random > number and attempts <5 %}
       <div class="red">
         <h1>Too Low</h1>
       </div>
-      {%else%}
+      {%elif random == number and attempts <5 %}
       <div class="green">
         <h1>
-          {{number}} was the number you got it after {{attempts}} attempts
+          {{number}} Was the number you got it after {{attempts}} Attempts
         </h1>
         <form action="/clear" method="post">
-          <input type="submit" name="clear" />
+          <input type="submit" name="clear" value="Reset" />
         </form>
       </div>
-      {% endif %} {% if attempts >=5 %}
+      {%else%}
       <div class="yellow">
         <h1>You Lose</h1>
         <form action="/lose" method="post">
-          <input type="submit" value="again" name="lose" />
+          <input type="submit" value="Try Again" name="lose" />
         </form>
       </div>
       {% endif %}
 
       <form action="/process" method="post">
-        <input type="text" name="name" id="" />
-        <input type="submit" name="reset" />
+        <input type="text" name="name" required />
+        <input type="submit" name="reset" value="Try" />
       </form>
     </div>
   </body>
