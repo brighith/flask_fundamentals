@@ -1,0 +1,23 @@
+select * from users
+where id>1;
+
+select * from users
+where last_name like "c%"
+order by created_at desc;
+
+insert into tweets  (tweet, user_id , created_at , updated_at)
+values ("i am victorial", 4, now(), now()),
+		("i am the best", 3, now(), now())
+update users 
+set first_name = "dani"
+where id=1
+
+delete from tweets 
+where id=13 
+
+
+select concat('MR.', ' ', first_name ,' ' ,last_name)as Full_Name , birthday as BD from users
+
+select concat_ws(' ', first_name , last_name, 'Ninjas' )as Full_Name , birthday as BD from users
+
+select upper(first_name) as First_upper from users
